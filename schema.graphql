@@ -1,0 +1,16 @@
+type Transfer @entity {
+  # tx hash + log index
+  id: ID! 
+
+  from: Bytes!
+  to: Bytes!
+  value: BigInt!
+}
+
+type User @entity {
+  # the user address
+  id: ID!
+
+  # the total number of transfers
+  numTransfers: BigInt!
+}

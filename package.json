@@ -1,0 +1,24 @@
+{
+  "name": "ormi-metis-template",
+  "version": "1.0.0",
+  "description": "A template to use the subgraph in Metis using Ormi",
+  "scripts": {
+    "codegen": "rm -rf src/generated && graph codegen -o src/generated",
+    "build": "rm -rf build && graph build",
+    "auth:mainnet": "graph auth https://api.0xgraph.xyz/deploy",
+    "create:mainnet": "graph create --node https://metisapi.0xgraph.xyz/deploy metis-example/erc20-transfers",
+    "deploy:mainnet": "graph deploy metis-example/erc20-transfers --node https://metisapi.0xgraph.xyz/deploy --ipfs https://metisapi.0xgraph.xyz/ipfs"
+  },
+  "keywords": [
+    "graphql",
+    "subgraph",
+    "metis",
+    "ormi"
+  ],
+  "author": "MohammadShahin",
+  "license": "ISC",
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.73.0",
+    "@graphprotocol/graph-ts": "^0.35.1"
+  }
+}
